@@ -1,0 +1,17 @@
+Ein Linux System mit LaTeX und den in /src/main.tex verwendeten Paketen wird vorausgesetzt.
+
+NICHT ALLE ORDNER SIND ÖFFENTLICH!!! Am Projekt beteiligte haben Zugriff auf die Prüfungsbeispiele und Lösungen.
+
+/compile hier befindet sich ein Makefile, mit dem selber von den Quellen die Ausgabe generiert werden kann.
+	testpdflatex-> erstellt ein pdf mit den Beispielen, welche innerhalb der letzten 20 Minuten geändert wurden.
+	pdflatex -> erstellt das vollständige Dokument mit allen Beispielen (Buch,Test und Mündlich) sofern vorhanden
+	final -> bennent das Dokument richtig um
+/output hier befinden sich die fertig compillierten Dokumente
+/src hier befinden sich die Quellen
+	/bsp hier befinden sich die Quellen für die Rechenbeispiele
+		/buch hier sind die Quellen der Buchbeispiele
+		/test hier sind die Quellen der Prüfungsbeispiele
+	/mdl hier sind die Quellen der Mündlichen Prüfungsfragen
+	/skript Skriptum und Aufgabensammlung
+	/video	Link zu Youtube Videos
+	

@@ -1,0 +1,14 @@
+*.kfcg
+*.kdev4
+*.desktop
+*.aux
+*.bbl
+*.bib*
+*.blg
+*.dvi
+*.lof
+*.log
+*.out
+*.toc
+*.backup
+main.pdf
