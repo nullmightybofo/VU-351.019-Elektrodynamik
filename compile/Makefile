@@ -9,20 +9,20 @@ exercise.tex: $(wildcard dir/../src/)
 
 mdl.tex: $(wildcard dir/../src/)
 	find  ./../src/mdl -name *.tex | awk '{printf "\\input{%s}\n", $$1}' > ./../src/mdl.tex
+
 pdflatex: exam.tex exercise.tex mdl.tex
 	pdflatex -synctex=1 -interaction=nonstopmode -output-directory='${output}' '${filename}.tex'
+	mv ./../output/main.pdf ./../output/VU-351.019-Elektrodynamik.pdf
 
 free: exercise.tex mdl.tex
 	pdflatex -synctex=1 -interaction=nonstopmode -output-directory='${output}' './../src/free.tex'
 	mv ./../output/free.pdf ./../output/VU-351.019-Elektrodynamik-Angaben-Buch-Mündlich.pdf
-final: pdflatex
-	mv ./../output/main.pdf ./../output/VU-351.019-Elektrodynamik.pdf
 	
 inputstest.tex: $(wildcard dir/../src/)
 	find ./../src/bsp ./../src/mdl -name *.tex -mmin -20 | awk '{printf "\\input{%s}\n", $$1}' > ./../src/inputstest.tex
 			
 testpdflatex: inputstest.tex
-	pdflatex -synctex=1 -interaction=nonstopmode -output-directory='${output}' './../src/test.tex'
+	pdflatex -synctex=1 -interaction=errorstopmode -output-directory='${output}' './../src/test.tex'
 	
 latex:
 	latex -synctex=1 -halt-on-error -interaction=errorstopmode -output-directory='${output}' '${filename}.tex'
