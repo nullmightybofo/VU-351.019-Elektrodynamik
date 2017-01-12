@@ -1,0 +1,21 @@
+\begin{question}[section=5,subsection=53,name={Sprungwelle},difficulty=8,type=exercise,tags={20161207}]
+	Eine angenähert verlustfreie Leitung mit der Wellenimpedanz $Z_W$ ist nach Abb. mit einer RC-Parallelschaltung abgeschlossen. Es fällt eine Sprungwelle mit dem Spannungsscheitelwert $ \hat U_1$ ein. Berechnen Sie allgemein den Zeitverlauf $ U(t)$ der Spannung am Abschluss.	
+	\\ \textbf{Hinweis:}\\
+	Stellen Sie die Wellen als Überlagerung von hin- und rücklaufenden Komponenten dar. Geben Sie dann speziell eine Differentialgleichung für $U(t)$ an und lösen Sie diese.
+\end{question}
+\begin{solution}
+	Die Allgemeine Lösung für die Wellengleichung mit hin und rücklaufenden Komponenten sieht so aus, wobei mit Index 1 gekennzeichnete Terme die hinlaufende und mit 2 gekennzeichnete die rücklaufenden Welle darstellen.
+	\begin{align}
+		U(z,t)&=U_1 (ct -z) + U_2(ct +z)\\
+		I(z,t) &= I_1 (ct -z) + I_2(ct +z)
+	\end{align}
+	Wir legen die Z-Achse in den Endpunkt der Leitung, somit sind die Gleichungen nur noch mehr von der Zeit abhängig. Der Strom am Leitungsende setzt sich aus dem Strom durch den Kondensator und durch den Widerstand zusammen. $I(t) = C dU/dt + U/R$ Der hinlaufende Strom hängt mit der hinlaufenden Spannung über $I_1 = U_1/Z_W$ zusammen. Der Rücklaufende Strom durch einsetzen in die erste Wellengleichung mit $(U(t) - U_1)/(-Z_W)$. Daraus ergibt sich dann die Differentialgleichung:
+	\begin{align}
+		C \frac{dU(t)}{dt} + \frac{U(t)}{R} &= \frac{\hat U_1}{Z_W} + \frac{U(t) - \hat U_1}{-Z_W}\\
+		\frac{dU(t)}{dt} + \frac{U(t)}{C} \cdot \left ( \frac{1}{R} + \frac{1}{Z_W} \right )&= \frac{2 \hat U_1}{Z_W C}\\
+		U(s)s + \frac{U(s)}{C} \cdot \left ( \frac{1}{R} + \frac{1}{Z_W} \right )&= \frac{2 \hat U_1}{Z_W C s}\\
+		U(s) &= \frac{2 \hat U_1}{Z_W C s} \cdot \frac{1}{s+\frac{1}{C} \cdot \left ( \frac{1}{R} + \frac{1}{Z_W} \right )}\\
+		U(s) &= \frac{2 \hat U_1 R}{(Z_W + R)\cdot s} - \frac{2 \hat U_1 R}{Z_W + R} \cdot \frac{1}{s+\frac{1}{C} \cdot \left ( \frac{1}{R} + \frac{1}{Z_W} \right )}\\
+		U(t) &= \frac{2 \hat U_1 R}{Z_W + R} \cdot \left ( 1 - e^{\frac{-t(R +Z_W)}{C R Z_W}}\right )\varepsilon(t)
+	\end{align}
+\end{solution}

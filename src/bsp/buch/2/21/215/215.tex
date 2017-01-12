@@ -1,0 +1,16 @@
+\begin{question}[section=2,subsection=21,name={Wahre und fiktive Stromdichte},difficulty=2,type=exercise,tags={20161207}]
+	Stellen Sie für ein linear homogen isotrop magnetisierbares Material der Permeabilitätszahl $\mu_r$ einen Zusammenhang her zwischen der (fiktiven) Magnetisierungsstromdichte $\vec J^f$ und der (wahren) Leitungsstromdichte $ \vec J$. Vernachlässigen Sie dabei Verschiebungsströme.
+	\\ \textbf{Hinweis:}\\
+	Wie hängen die Vektorfelder $\vec M$ und $\vec H$ untereinander und mit den räumlichen Stromdichten zusammen?
+\end{question}
+\begin{solution}
+	Die Beziehung $\vec H = \frac{\vec B}{\mu_0} - \vec M$ wird in den Ampere-Maxwell Satz $\vec \nabla \times \vec H = \vec J + d_t \vec D$ eingesetzt. Da wir laut der Angabe die Verschiebungsströme Vernachlässigen können, wird $\vec D = 0$.
+	\begin{align}
+		\vec \nabla \times \vec H &= \vec J\\
+		\vec \nabla \times ( \frac{\vec B}{\mu_0} - \vec M) &= \vec J\\
+		\vec \nabla \times \frac{\vec B}{\mu_0} - \vec \nabla \times  \vec M &= \vec J\\
+		\vec \nabla \times  \vec H \cdot \mu_r - \vec J^f &= \vec J\\
+		\vec J^f &= \vec J \cdot \mu_r - \vec J = \vec J (\mu_r -1)\\
+		\vec J^f &= \kappa \vec J
+	\end{align}
+\end{solution}
