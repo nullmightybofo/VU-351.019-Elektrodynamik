@@ -1,0 +1,131 @@
+\input{./../src/conf/package.tex}
+\begin{document}
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE PAGE
+	%----------------------------------------------------------------------------------------
+	
+	\begin{titlepage}
+		
+		\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+		
+		\center % Center everything on the page
+		
+		\textsc{\LARGE TU Wien}\\[1.5cm] % Name of your university/college
+		\textsc{\Large Elektrodynamik}\\[0.5cm] % Major heading such as course name
+		\textsc{\large VU 351.019 \\ WS 2016}\\[0.5cm] % Minor heading such as course title
+		
+		\HRule \\[0.4cm]
+		{ \huge \bfseries Aufgabensammlung}\\[0.4cm] % Title of your document
+		\HRule \\[1.5cm]
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{Lizenz:}\\
+				GNU \textsc{GPLv3} % Your name
+			\end{flushleft}
+		\end{minipage}
+		~
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				\textsc{} % Supervisor's Name
+			\end{flushright}
+		\end{minipage}\\[4cm]
+		
+		{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+		
+		%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+		
+		\vfill % Fill the rest of the page with whitespace
+		
+	\end{titlepage}
+	
+	%----------------------------------------------------------------------------------------
+	%	TABLE OF CONTENTS
+	%----------------------------------------------------------------------------------------
+	
+	\tableofcontents % Include a table of contents
+	\input{./../src/conf/preambel.tex}
+	
+	%----------------------------------------------------------------------------------------
+	%	INTRODUCTION
+	%----------------------------------------------------------------------------------------
+	\SetupExSheets{questions-totoc=true,questions-toc-level=subsubsection}
+	\SetupExSheets[solution]{print=true}
+	\section{Einführung} % Major section
+	\subsection{Analytische Werkzeug}
+	\SetupExSheets{use-subsections=12}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\section{Elektromagnetische Felder}
+	\subsection{Globale und Lokale Eigenschaften}
+	\SetupExSheets{use-subsections=21}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\subsection{Die Feldgleichungen in Sonderfällen}
+	\SetupExSheets{use-subsections=22}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\subsection{Energie und Impuls}
+	\SetupExSheets{use-subsections=23}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\section{Statische und Stationäre Felder}
+	\subsection{Elektrostatik und Quasi-Elektrostatik}
+	\SetupExSheets{use-subsections=31}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\subsection{Spezielle elektrostatsische Felder}
+	\SetupExSheets{use-subsections=32}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\subsection{Relaxion und Konvektion elektrischer Ladungen}
+	\SetupExSheets{use-subsections=33}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\subsection{Stationäre Magnetfelder}
+	\SetupExSheets{use-subsections=34}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\subsection{Spezielle stationäre Magnetfelder}
+	\SetupExSheets{use-subsections=35}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\section{Induktionserscheinungen}
+	\subsection{Quasistationäre Felder}
+	\SetupExSheets{use-subsections=41}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\subsection{Diffusion magnetischer Felder}
+	\SetupExSheets{use-subsections=42}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\section{Elektromagnetische Welllen}
+	\subsection{Grundgleichungen und Potentiale}
+	\SetupExSheets{use-subsections=51}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\subsection{Typen von Wellen}
+	\SetupExSheets{use-subsections=52}
+	
+	\input{./../src/tmp/exm.tex}
+	
+	\subsection{Wellen auf Doppelleitungen}
+	\SetupExSheets{use-subsections=53}
+	
+	\input{./../src/tmp/exm.tex}
+	
+\end{document}

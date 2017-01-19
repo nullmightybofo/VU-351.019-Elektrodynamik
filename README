@@ -1,17 +1,58 @@
-Ein Linux System mit LaTeX und den in /src/main.tex verwendeten Paketen wird vorausgesetzt.
+Ein Linux System mit LaTeX und den in /src/conf/package.tex verwendeten Paketen wird vorausgesetzt.
 
-NICHT ALLE ORDNER SIND ÖFFENTLICH!!! Am Projekt beteiligte haben Zugriff auf die Prüfungsbeispiele und Lösungen.
+Der /closed Ordner ist Personen welche am Projekt beteiligt sind vorbehalten.
 
-/compile hier befindet sich ein Makefile, mit dem selber von den Quellen die Ausgabe generiert werden kann.
-	testpdflatex-> erstellt ein pdf mit den Beispielen, welche innerhalb der letzten 20 Minuten geändert wurden.
-	pdflatex -> erstellt das vollständige Dokument mit allen Beispielen (Buch,Test und Mündlich) sofern vorhanden
-	final -> bennent das Dokument richtig um
-/output hier befinden sich die fertig compillierten Dokumente
-/src hier befinden sich die Quellen
-	/bsp hier befinden sich die Quellen für die Rechenbeispiele
-		/buch hier sind die Quellen der Buchbeispiele
-		/test hier sind die Quellen der Prüfungsbeispiele
-	/mdl hier sind die Quellen der Mündlichen Prüfungsfragen
-	/skript Skriptum und Aufgabensammlung
-	/video	Link zu Youtube Videos
+Makefile
+	test	erstellt test.pdf mit allen Datein, welche innerhalb der letzten 20 Minuten bearbeitet wurden.
+	pdf-{bsp,exm,mdl,lab,ue,skp}	erstellt die entsprechenden Datein und bennent sie richtig und verschiebt sie.
+	clean		entfernt temporäre Datein
+	all		alles wird compilliert
+/output Fertig compillierte Dokumente
+	/bsp
+		/{Lehrveranstaltung}-Beispiele-Angabe.pdf
+		/{Lehrveranstaltung}-Beispiele-Lösung.pdf
+		/{Lehrveranstaltung}-Beispiele-Hybrid.pdf
+	/exm	
+		/{YYYYMMDD} Für jeden Prüfungstag gibt es einen Unterordner
+			/{Lehrveranstaltung}-{YYYYMMDD}-Angabe.pdf
+			/{Lehrveranstaltung}-{YYYYMMDD}-Lösung.pdf
+			/{Lehrveranstaltung}-{YYYYMMDD}-Hybrid.pdf
+		Sind die Beispiele einzelnen Kapiteln zuordbar, gibt es sie gebündelt
+		/{Lehrveranstaltung}-Prüfungsbeispiele-Angabe.pdf
+		/{Lehrveranstaltung}-Prüfungsbeispiele-Lösung.pdf
+		/{Lehrveranstaltung}-Prüfungsbeispiele-Hybrid.pdf
+	/mdl
+	/lab
+	/ue
+	/skp
+		/{Lehrveranstaltung}-Skript.pdf
+/closed Nicht für die Öffentlichkeit bestimmte Informationen
+	/src	gleiche Struktur, jedoch für geschlossenen Personenkreis
+	/output	
+/src Quelltexte und Rohmaterial (.tex .pdf .jpeg .doc ...)
+	/bsp	Quelltexte und Rohmaterial für die Buchbeispiele
+		/{Kapitelnummer}
+			/{Subkapitelnummer}
+				/{Beispielnummer}
+					/{Beispielname}.tex
+					/{Beispielname}.jpeg	z.b. Foto von dem gerechneten Bsp
+	/exm	Quelltexte und Rohmaterial zu ganzen Prüfungen sortiert nach Datum
+		/{YYYYMMDD} Rohmaterial zu der Prüfung an diesem Tag incl. Lösungsversuch
+			/{YYYYMMDD}-N.pdf .jpeg .doc (mit N steigend)
+			/{YYYYMMDD}-Bspnr.tex (Quelltexte mit aufsteigener Bspnr)
+		/{Kapitelnummer} Wiederkehrende Beispiele, welche bestimmten Kapiteln zugeordnet werden können
+			/{Subkapitelnummer}
+				/{Beispielnummer}
+					/{Beispielname}.tex
+					/{Beispielname}.jpeg	z.b. Foto von dem gerechneten Bsp
+		/misc	Rohmaterial, welches weder einem bestimmten Prüfungstag oder Kapitel zugeordnet werden kann. (Es ist z.b. eine Sammlung von vielen Beispielen, welche in einen Dokument sind und nicht aufgeteilt werden können.)
+	Die gleiche Struktur wie bei /exm weist auch /mdl /lab /ue auf.			
+	/mdl	Quelltexte und Rohmaterial für mündliche Prüfungsfragen
+	/lab	Quelltexte und Rohmaterial für Labor
+	/ue	Quelltexte und Rohmaterial für Übungen
 	
+	/skp	Skriptum und Aufgabensammlung
+	/main	Buildorder mit Builddatein
+	/conf	Konfigurationsdatein
+	/tmp	Temporär auf dem Rechner generierte Datein
+	/hlp	Link zu Youtube Videos, zusätzliche Hilfestellungen, erklärende Texte
