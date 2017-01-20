@@ -11,4 +11,5 @@
 *.out
 *.toc
 *.backup
+/closed
 main.pdf
