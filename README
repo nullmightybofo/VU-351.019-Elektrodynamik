@@ -45,7 +45,8 @@ Makefile
 	/exm	Quelltexte und Rohmaterial zu ganzen Prüfungen sortiert nach Datum
 		/{YYYYMMDD} Rohmaterial zu der Prüfung an diesem Tag incl. Lösungsversuch
 			/{YYYYMMDD}-N.pdf .jpeg .doc (mit N steigend)
-			/{YYYYMMDD}-Bspnr.tex (Quelltexte mit aufsteigener Bspnr)
+			/{Beispielnummer}
+				/{YYYYMMDD}-Bspnr.tex (Quelltexte mit aufsteigener Bspnr)
 		/{Kapitelnummer} Wiederkehrende Beispiele, welche bestimmten Kapiteln zugeordnet werden können
 			/{Subkapitelnummer}
 				/{Beispielnummer}

@@ -16,5 +16,4 @@
 *.bz2*
 *.fdb*
 *.fls
-main.pdf
-test.pdf
+/*.pdf
