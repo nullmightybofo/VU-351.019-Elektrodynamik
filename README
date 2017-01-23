@@ -1,10 +1,15 @@
 Ein Linux System mit LaTeX und den in /src/conf/package.tex verwendeten Paketen wird vorausgesetzt.
 
-Der /closed Ordner ist Personen welche am Projekt beteiligt sind vorbehalten.
+Der /closed Ordner ist Personen, welche am Projekt beteiligt sind, vorbehalten.
+
+HOWTO:
+Im Hauptordner make all ausführen und in output liegt das Ergebnis.
+
 
 Makefile
 	test	erstellt test.pdf mit allen Datein, welche innerhalb der letzten 20 Minuten bearbeitet wurden.
-	pdf-{bsp,exm,mdl,lab,ue,skp}	erstellt die entsprechenden Datein und bennent sie richtig und verschiebt sie.
+	pdf-{bsp,exm,mdl,lab,ue,skp}-{ang,lsg,hyb}	erstellt die entsprechenden Datein
+	final		verschiebt und benennt die Datein um.
 	clean		entfernt temporäre Datein
 	all		alles wird compilliert
 /output Fertig compillierte Dokumente
@@ -18,14 +23,15 @@ Makefile
 			/{Lehrveranstaltung}-{YYYYMMDD}-Lösung.pdf
 			/{Lehrveranstaltung}-{YYYYMMDD}-Hybrid.pdf
 		Sind die Beispiele einzelnen Kapiteln zuordbar, gibt es sie gebündelt
-		/{Lehrveranstaltung}-Prüfungsbeispiele-Angabe.pdf
-		/{Lehrveranstaltung}-Prüfungsbeispiele-Lösung.pdf
-		/{Lehrveranstaltung}-Prüfungsbeispiele-Hybrid.pdf
+		/{Lehrveranstaltung}-Prüfung-Angabe.pdf
+		/{Lehrveranstaltung}-Prüfung-Lösung.pdf
+		/{Lehrveranstaltung}-Prüfung-Hybrid.pdf
 	/mdl
 	/lab
 	/ue
 	/skp
 		/{Lehrveranstaltung}-Skript.pdf
+	/tmp	temporärer Ordner fürs kompilieren
 /closed Nicht für die Öffentlichkeit bestimmte Informationen
 	/src	gleiche Struktur, jedoch für geschlossenen Personenkreis
 	/output	
