@@ -11,5 +11,10 @@
 *.out
 *.toc
 *.backup
-/closed
+*.gz*
+*.tar*
+*.bz2*
+*.fdb*
+*.fls
+*~
 /*.pdf

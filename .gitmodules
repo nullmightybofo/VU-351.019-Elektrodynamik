@@ -1,0 +1,3 @@
+[submodule "closed"]
+	path = closed
+	url = https://github.com/Painkilla/VU-351.019-Elektrodynamik-closed.git
