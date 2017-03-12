@@ -17,7 +17,8 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-\documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+% Consider using KOMA-Script classes, e.g. scrartcl. May want to check: http://www.komascript.de/release
+\documentclass[12pt, a4paper]{article} % Default font size is 12pt, it can be changed here
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -35,11 +36,16 @@
 %\DeclareMathOperator{\tanh}{tanh}
 \usepackage{mathrsfs}
 \pgfplotsset{compat=1.8}
-\usepackage{textcomp}
-\usepackage{geometry} % Required to change the page size to A4
-\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+\usepackage{textcomp}  % what do you need this for?
 
-\usepackage{graphicx} % Required for including pictures
+% geometry package is afaik uneccessary if you only want to set the paper size, put as option in e.g. article
+% \usepackage{geometry} % Required to change the page size to A4
+% \geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{lmodern}  % Latin Modern Roman, imo better fonts than original CMR
+
+% graphicx already loaded above
+% \usepackage{graphicx} % Required for including pictures
 
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 
